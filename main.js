@@ -112,7 +112,7 @@ function refresh_snake(){
 
 function draw_snake(){
 	let snake_len = snake.length;
-	document.getElementById("p1").innerHTML = "SCORE: " + snake_len +"    SPEED: " + speed;
+	document.getElementById("p1").innerHTML = "SCORE:" + snake_len +"    SPEED:" + speed;
 	ctx.clearRect(0, 0, Width, Height);
 	for (let i = 0; i<snake_len; i++){
 		let conner_x = snake[i][0]*grid_w+margin;
@@ -146,7 +146,7 @@ function play_snake(){
 
 	}
 	else{
-		document.getElementById("p1").innerHTML = "DEAD!";
+		document.getElementById("p1").innerHTML = "DEAD! score:" + snake.length;
 	}
 	setTimeout(play_snake,500/(1.2**speed));
 }
